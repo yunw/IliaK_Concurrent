@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="1" errors="0" failures="0" skip="0"><testcase classname="concTests.testIWT_AVW.testIWT_AVW" name="test_photoswipe1" time="20.931"><system-out><![CDATA[('test_photoswipe1', ' time is:  ', '2013-04-22 21:11:36')
+
+Test done! :D
+]]></system-out></testcase></testsuite>

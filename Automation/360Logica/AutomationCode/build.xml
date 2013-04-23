@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<project name="Test" default="runAll" basedir=".">
+
+ <property name ="IE_Port" value = "5555"/>
+ <property name ="Chrome_Port" value = "5556"/>
+ <property name ="FF_Port" value = "5557"/>
+ <property name ="Android_Port" value = "5558"/>
+ <property name ="IOS_Port" value = "3001"/>
+ <property name ="Android_Port" value = "5559"/>
+ <property name ="serialId" value = "emulator-5554"/>
+ 
+	<target name="runOnIE">	
+	
+		<exec dir="./Scripts" executable="cmd">
+			<arg line="/c python GoogleImageSearch.py ${IE_PORT} WINDOWS iehta"/>
+		</exec>		
+	</target>
+	
+	<target name="runOnChrome">	
+	<echo message="Running test on chrome"/>
+		<exec dir="./Scripts" executable="cmd">
+			<arg line="/c python GoogleImageSearch.py ${Chrome_Port} WINDOWS chrome"/>
+		</exec>		
+	</target>
+	
+	<target name="runOnFF">	
+	<echo message="Running test on firefox"/>
+		<exec dir="./Scripts" executable="cmd">
+			<arg line="/c python GoogleImageSearch.py ${FF_Port} WINDOWS firefox"/>
+		</exec>		
+	</target>
+	
+	<target name="runOnIOS">
+	<echo message="Running test on iOS device"/>
+		<exec dir="./Scripts" executable="cmd">
+			<arg line="/c python MobileGoogleSearch.py ${IOS_Port} MAC iPhone"/>
+		</exec>		
+	</target>
+	
+	<target name="runAdroidWebdriverServer">
+		<echo message="start the server application on the device"/>
+		<exec dir="." executable="cmd">
+			<arg line ="/c adb -s ${serialId} shell am start -a android.intent.action.MAIN -n org.openqa.selenium.android.app/.MainActivity -e debug true"/>
+		</exec>
+		<sleep seconds="5"/>
+	</target>
+	
+	<target name="adbForward" depends="runAdroidWebdriverServer">
+	<echo message="Enable port forwarding from Android Server on the emulator to the host machine over http connection"/>
+		<exec dir="." executable ="cmd">
+			<arg line="/c adb -s ${serialId} forward tcp:${Android_Port} tcp:8080"/>
+		</exec>
+		<sleep seconds="5"/>
+	</target>
+	
+	<target name="runOnAndroid" depends="adbForward">	
+	<echo message="Running test on Android device"/>
+		<exec dir="./Scripts" executable="cmd">
+			<arg line="/c python MobileGoogleSearch.py ${Android_Port} ANDROID android"/>
+		</exec>		
+	</target>
+	
+	<target name= "runAll">
+		<parallel>
+			<antcall target ="runOnIE"/>
+			<antcall target ="runOnChrome"/>
+			<antcall target ="runOnFF"/>	
+		</parallel>
+	</target>
+
+</project>

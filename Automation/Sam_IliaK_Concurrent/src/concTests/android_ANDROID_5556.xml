@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="1" errors="1" failures="0" skip="0"><testcase classname="concTests.testIWT_AVW.testIWT_AVW" name="test_site1" time="5.773"><error type="selenium.common.exceptions.WebDriverException" message="Message: u'The expected Safari data directory does not exist: C:\\Users\\Admin\\AppData\\Roaming\\Apple Computer\\Safari' ; Stacktrace: Method checkState threw an error in Preconditions.java "><![CDATA[Traceback (most recent call last):
+  File "C:\Python27\lib\unittest\case.py", line 323, in run
+    self.setUp()
+  File "D:\Temp\eclipse\Workspace\Automation\VariousExamples\IliaK_Concurrent\src\concTests\testIWT_AVW.py", line 66, in setUp
+    self.driver = webdriver.Remote(command_executor='http://localhost:'+str(hostport)+'/wd/hub',  desired_capabilities=webdriver.DesiredCapabilities.ANDROID)
+  File "C:\Python27\lib\site-packages\selenium-2.32.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 72, in __init__
+    self.start_session(desired_capabilities, browser_profile)
+  File "C:\Python27\lib\site-packages\selenium-2.32.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 114, in start_session
+    'desiredCapabilities': desired_capabilities,
+  File "C:\Python27\lib\site-packages\selenium-2.32.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 165, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium-2.32.0-py2.7.egg\selenium\webdriver\remote\errorhandler.py", line 152, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: u'The expected Safari data directory does not exist: C:\\Users\\Admin\\AppData\\Roaming\\Apple Computer\\Safari' ; Stacktrace: Method checkState threw an error in Preconditions.java 
+]]></error><system-out><![CDATA[HOSTPORT <type 'unicode'> 8090
+]]></system-out></testcase></testsuite>

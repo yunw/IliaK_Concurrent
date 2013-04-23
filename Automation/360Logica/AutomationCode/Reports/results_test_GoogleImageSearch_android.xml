@@ -1,0 +1,19 @@
+<testsuite errors="2" failures="0" name="unittest.suite.TestSuite" tests="1" time="17.218">
+  <testcase classname="__main__.GoogleImageSearch" name="test_GoogleImageSearch" time="17.2180">
+    <error type="selenium.common.exceptions.WebDriverException">Message: u'Session [1365587302656] was terminated due to FORWARDING_TO_NODE_FAILED' ; Stacktrace: Method getExistingSession threw an error in ActiveTestSessions.java 
+  File "C:\Python27\lib\unittest\case.py", line 345, in run
+    self.tearDown()
+  File "E:\Atin\POC\PythonPOC\10Apr\AutomationCode\Scripts\utils\DriverFramework.py", line 48, in tearDown
+    self.driver.quit()
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 450, in quit
+    self.execute(Command.QUIT)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 160, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 149, in check_response
+    raise exception_class(message, screen, stacktrace)
+    </error>
+  </testcase>
+  <system-out><![CDATA[Android
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

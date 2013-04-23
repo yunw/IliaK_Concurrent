@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="1" errors="0" failures="0" skip="0"><testcase classname="concTests.testIWT_AVW.testIWT_AVW" name="test_site1" time="15.592"><system-out><![CDATA[('test_site1', ' time is:  ', '2013-04-21 13:22:18')
+
+Fetching text from article post:  A weekly guide to social media platforms like Facebook, Twitter, Linkedin, Spotify, Google+, and more. This week we're talking about #TwitterMusic, Facebook, Linkedin, WhatsApp...
+Test done! :D
+]]></system-out></testcase></testsuite>

@@ -1,0 +1,17 @@
+<testsuite errors="0" failures="1" name="unittest.suite.TestSuite" tests="1" time="19.500">
+  <testcase classname="__main__.GoogleImageSearch" name="test_GoogleImageSearch" time="19.5000">
+    <failure type="exceptions.AssertionError">u'Google Images' != 'weather in san francisco - Google Search'
+  File "C:\Python27\lib\unittest\case.py", line 318, in run
+    testMethod()
+  File "GoogleImageSearch.py", line 43, in test_GoogleImageSearch
+    self.assertEqual(self.driver.title, "weather in san francisco - Google Search")
+  File "C:\Python27\lib\unittest\case.py", line 494, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Python27\lib\unittest\case.py", line 487, in _baseAssertEqual
+    raise self.failureException(msg)
+    </failure>
+  </testcase>
+  <system-out><![CDATA[Android
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

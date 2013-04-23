@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="1" errors="1" failures="0" skip="0"><testcase classname="concTests.testIWT_AVW.testIWT_AVW" name="test_hotmail" time="41.191"><error type="selenium.common.exceptions.WebDriverException" message="Message: u&quot;Unable to either launch or connect to Chrome. Please check that ChromeDriver is up-to-date. Using Chrome binary at: C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 41.16 seconds\nBuild info: version: '2.32.0', revision: '6c40c18', time: '2013-04-09 17:22:56'\nSystem info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_17'\nDriver info: org.openqa.selenium.chrome.ChromeDriver&quot; ; Stacktrace: Method newInstance0 threw an error in NativeConstructorAccessorImpl.java "><![CDATA[Traceback (most recent call last):
+  File "C:\Python27\lib\unittest\case.py", line 323, in run
+    self.setUp()
+  File "D:\Temp\eclipse\Workspace\Automation\VariousExamples\IliaK_Concurrent\src\concTests\testIWT_AVW.py", line 58, in setUp
+    "node":config['rc_configuration']['node']})
+  File "C:\Python27\lib\site-packages\selenium-2.32.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 72, in __init__
+    self.start_session(desired_capabilities, browser_profile)
+  File "C:\Python27\lib\site-packages\selenium-2.32.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 114, in start_session
+    'desiredCapabilities': desired_capabilities,
+  File "C:\Python27\lib\site-packages\selenium-2.32.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 165, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium-2.32.0-py2.7.egg\selenium\webdriver\remote\errorhandler.py", line 152, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: u"Unable to either launch or connect to Chrome. Please check that ChromeDriver is up-to-date. Using Chrome binary at: C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 41.16 seconds\nBuild info: version: '2.32.0', revision: '6c40c18', time: '2013-04-09 17:22:56'\nSystem info: os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_17'\nDriver info: org.openqa.selenium.chrome.ChromeDriver" ; Stacktrace: Method newInstance0 threw an error in NativeConstructorAccessorImpl.java 
+]]></error></testcase></testsuite>

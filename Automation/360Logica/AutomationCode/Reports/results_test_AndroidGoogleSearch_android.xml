@@ -1,0 +1,21 @@
+<testsuite errors="1" failures="0" name="unittest.suite.TestSuite" tests="1" time="23.515">
+  <testcase classname="__main__.AndroidGoogleSearch" name="test_AndroidGoogleSearch" time="23.5150">
+    <error type="selenium.common.exceptions.NoSuchElementException">Message: u"Could not find element with id: lst-ib\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: 'unknown', revision: 'unknown', time: 'unknown'\nSystem info: os.name: 'Linux', os.arch: 'armv5tejl', os.version: '2.6.29-00261-g0097074-dirty', java.version: '0'\nDriver info: driver.version: EventFiringWebDriver" ; Stacktrace: Method lookupElement threw an error in AndroidWebElement.java 
+  File "C:\Python27\lib\unittest\case.py", line 318, in run
+    testMethod()
+  File "AndroidGoogleSearch.py", line 51, in test_AndroidGoogleSearch
+    self.driver.find_element_by_id("lst-ib").clear()
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 193, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 675, in find_element
+    {'using': by, 'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 160, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 149, in check_response
+    raise exception_class(message, screen, stacktrace)
+    </error>
+  </testcase>
+  <system-out><![CDATA[Android
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

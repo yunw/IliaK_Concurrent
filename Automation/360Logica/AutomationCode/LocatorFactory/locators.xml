@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Locators>
+	<Google>
+		<SearchField>lst-ib</SearchField>
+		<SearchButton>btnG</SearchButton>
+	</Google>
+</Locators>

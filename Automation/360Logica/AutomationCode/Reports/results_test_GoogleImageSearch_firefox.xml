@@ -1,0 +1,6 @@
+<testsuite errors="0" failures="0" name="unittest.suite.TestSuite" tests="1" time="31.454">
+  <testcase classname="__main__.GoogleImageSearch" name="test_GoogleImageSearch" time="31.4540"></testcase>
+  <system-out><![CDATA[Android
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
