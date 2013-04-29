@@ -1,5 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="1" errors="0" failures="0" skip="0"><testcase classname="concTests.testIWT_AVW.testIWT_AVW" name="test_site1" time="15.592"><system-out><![CDATA[('test_site1', ' time is:  ', '2013-04-21 13:22:18')
-
-Fetching text from article post:  A weekly guide to social media platforms like Facebook, Twitter, Linkedin, Spotify, Google+, and more. This week we're talking about #TwitterMusic, Facebook, Linkedin, WhatsApp...
-Test done! :D
-]]></system-out></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite name="nosetests" tests="1" errors="1" failures="0" skip="0"><testcase classname="concTests.testIWT_AVW.testIWT_AVW" name="test_photoswipe1" time="0.022"><error type="selenium.common.exceptions.WebDriverException" message="Message: u'Error forwarding the new session Empty pool of VM for setup {platform=ANY, node=5560, browserName=internet explorer}' ; Stacktrace: Method process threw an error in RequestHandler.java "><![CDATA[Traceback (most recent call last):
+  File "C:\Python27\lib\unittest\case.py", line 323, in run
+    self.setUp()
+  File "D:\Temp\1Repositories\Git\GitAutomation\Automation\Sam_IliaK_Concurrent\src\concTests\testIWT_AVW.py", line 66, in setUp
+    "node":config['rc_configuration']['node']})
+  File "C:\Python27\lib\site-packages\selenium-2.32.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 72, in __init__
+    self.start_session(desired_capabilities, browser_profile)
+  File "C:\Python27\lib\site-packages\selenium-2.32.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 114, in start_session
+    'desiredCapabilities': desired_capabilities,
+  File "C:\Python27\lib\site-packages\selenium-2.32.0-py2.7.egg\selenium\webdriver\remote\webdriver.py", line 165, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\selenium-2.32.0-py2.7.egg\selenium\webdriver\remote\errorhandler.py", line 152, in check_response
+    raise exception_class(message, screen, stacktrace)
+WebDriverException: Message: u'Error forwarding the new session Empty pool of VM for setup {platform=ANY, node=5560, browserName=internet explorer}' ; Stacktrace: Method process threw an error in RequestHandler.java 
+]]></error></testcase></testsuite>
