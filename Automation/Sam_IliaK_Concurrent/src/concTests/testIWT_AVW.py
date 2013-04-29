@@ -1,6 +1,8 @@
 from include import *
 from testconfig import config
+import nose
 
+print dir (nose.suite.LazySuite)
 file_name = os.path.relpath(__file__)[:-3]
 
 
@@ -80,7 +82,8 @@ class testIWT_AVW(unittest.TestCase):
     
     
         
-    
+    def tst_tst2(self, rand_avw_addr="random"):
+        print "test_tst2"
     
     def tst_bynd1(self, rand_avw_addr="random"):
         try:
@@ -113,7 +116,7 @@ class testIWT_AVW(unittest.TestCase):
             print eval_exception_result
             self.fail(eval_exception_result)              
 
-    def test_photoswipe1(self, rand_avw_addr="random"):
+    def tst_photoswipe1(self, rand_avw_addr="random"):
         try:
             """ not finished as test is waiting for address update to work on Qa1
             This will fail until we remove the AVW from international address. 
@@ -136,7 +139,7 @@ class testIWT_AVW(unittest.TestCase):
                 self.touch.tap(elem).perform()
                 elem =driver.find_element_by_css_selector("div.ps-uilayer")
                 time.sleep(3)
-                ##Failing here.
+                ##Flick Element where pixel speed 0 = normal, 1 = fast
                 self.touch.flick_element(elem,-350, 0, 1).perform()
                 time.sleep(3)
                 #flick_element(self, on_element, -400, 0, speed_pixels_ps):
@@ -172,6 +175,8 @@ class testIWT_AVW(unittest.TestCase):
                 alert.dismiss()
             return alert.text
         finally: self.accept_next_alert = True 
+    
+        
     
     def tearDown(self):
         time.sleep(3)
@@ -244,21 +249,31 @@ def custom_suite():
     #comment out certain tests to not run them
 
     suite = unittest.TestSuite()
-    
-#     suite.addTest(IWT_AVW('test_pluto_avw_pax_address')) 
-    #suite.addTest(testIWT_AVW('test_bynd1'))
-    suite.addTest(testIWT_AVW('test_photoswipe1'))
+#     suite.addTest(IWT_AVW('test_pluto_avw_pax_address'))  tst_tst2 
+    suite.addTest(testIWT_AVW('tst_bynd1'))
+    suite.addTest(testIWT_AVW('tst_photoswipe1'))
+    suite.addTest(testIWT_AVW('tst_tst2'))
     return suite
 
 
 
+ 
+# nosesuite.addTest(testIWT_AVW('tst_bynd1'))
+# suite.addTest(testIWT_AVW('tst_photoswipe1'))
+# suite.addTest(testIWT_AVW('tst_tst2'))
+# print "suite is", suite
+# 
+#nosesuite.runTests()
+
+runner = unittest.TextTestRunner()
+runner.run(custom_suite())
 
 
-if __name__ == '__main__':
-  
+if __name__=="__main__":
+    "MAIN IS RUN!!"
     runner = unittest.TextTestRunner()
     runner.run(custom_suite())
-    
+
     
 #     if len(sys.argv) > 1:
 #         if sys.argv[5]=='full_suite':
